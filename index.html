@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <h2>PVC Weight Calculator</h2>
+      <form>
+        <label for="length">Length (meters):</label>
+        <input type="number" step="0.01" id="length">
+        <label for="widthInches">Width (inches):</label>
+        <input type="number" step="0.01" id="widthInches">
+        <label for="heightMM">Thickness (mm):</label>
+        <input type="number" step="0.01" id="heightMM">
+        <label for="density">Density (kg/m<sup>3</sup>):</label>
+        <input type="number" step="1" id="density" value="1350"><br>
+        <button type="button" onclick="calculate()">Calculate</button><br>
+      </form>
+
+      <p>Weight for 1 meter:</p>
+      <p id="output"></p><br>
+      <p>Weight for 1 Roll:</p>
+      <p id="lengthCal"></p>
+    </div>
+    <div class="container">
+      <h2>Cost Calculator</h2>
+      <form>
+        <label for="Kg">Weight(Kgs)</label>
+    <input type="number" id="Kg"><br><br>
+    
+    <label for="kgPrice">Rate(Per Kg)</label>
+    <input type="number" id="kgPrice"><br><br>
+    
+    <label for="duty">Duty</label>
+    <input type="number" id="duty"><br><br>
+    
+    <label for="freight">Freight</label>
+    <input type="number" id="freight"><br><br>
+    
+    <label for="extExp">Extra Expenses</label>
+    <input type="number" id="extExp"><br><br>
+    
+    <button type="button" onclick="calculate1()">Calculate</button>
+      </form>
+      <p>Total Cost: <span id="result"></span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

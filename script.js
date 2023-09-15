@@ -6,7 +6,7 @@ function calculate1() {
     var freight = parseFloat(document.getElementById('freight').value);
     var extExp = parseFloat(document.getElementById('extExp').value);
   
-    var totalCost = Kg * kgPrice + duty + freight + extExp;
+    var totalCost = Kg * kgPrice + duty*kgPrice/100 + freight + extExp;
   
     document.getElementById('result').textContent = totalCost;
   }

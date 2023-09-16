@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div class="main">
+
     <div class="container">
       <h2>PVC Weight Calculator</h2>
       <form>
@@ -29,26 +29,66 @@
     <div class="container">
       <h2>Cost Calculator</h2>
       <form>
-        <label for="Kg">Weight(Kgs)</label>
-    <input type="number" id="Kg"><br><br>
-    
-    <label for="kgPrice">Rate(Per Kg)</label>
-    <input type="number" id="kgPrice"><br><br>
-    
-    <label for="duty">Duty %</label>
-    <input type="number" id="duty"><br><br>
-    
-    <label for="freight">Freight</label>
-    <input type="number" id="freight"><br><br>
-    
-    <label for="extExp">Extra Expenses</label>
-    <input type="number" id="extExp"><br><br>
-    
-    <button type="button" onclick="calculate1()">Calculate</button>
+          <label for="Kg">Weight(kgs)</label>
+          <input type="number" id="Kg"><br><br>
+  
+          <fieldset>
+              <legend>Cost</legend>
+              <div class="fieldset">
+                  <div class="wrapper">
+                      <label for="kgPrice">Rate(per kg)</label>
+                      <input type="number" id="kgPrice"><br><br>
+                  </div>
+                  <div class="wrapper">
+                      <label for="freight">Freight</label>
+                      <input type="number" id="freight"><br><br>
+                  </div>
+                  <div class="wrapper">
+                      <label for="extExp">Extra Expenses</label>
+                      <input type="number" id="extExp"><br><br>
+                  </div>
+              </div>
+          </fieldset>
+  
+          <fieldset>
+              <legend>Duty</legend>
+              <div class="fieldset">
+                  <div class="wrapper">
+                      <label for="custom-duty">Custom Duty </label>
+                      <input type="number" id="custom-duty" placeholder="%">
+                  </div>
+                  <div class="wrapper">
+                      <label for="additional-duty">Additional Duty </label>
+                      <input type="number" id="additional-duty" placeholder="%">
+                  </div>
+              </div>
+          </fieldset>
+  
+          <fieldset>
+              <legend>Tax</legend>
+              <div class="fieldset">
+                  <div class="wrapper">
+                      <label for="sales-tax">Sales Tax </label>
+                      <input type="number" id="sales-tax" placeholder="%">
+                  </div>
+                  <div class="wrapper">
+                      <label for="additional-sales-tax">Additional Sales Tax </label>
+                      <input type="number" id="additional-sales-tax" placeholder="%">
+                  </div>
+                  <div class="wrapper">
+                      <label for="income-tax">Income Tax</label>
+                      <input type="number" id="income-tax" placeholder="%">
+                  </div>
+              </div>
+          </fieldset>
+  
+          <button type="button" onclick="calculate1()">Calculate</button>
       </form>
+  
       <p>Total Cost: <span id="result"></span></p>
-    </div>
   </div>
+  
+  
   <script src="script.js"></script>
 </body>
 </html>

@@ -7,13 +7,13 @@
   }
 
   .container {
-    width: 480px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    max-width: 720px;
   }
 
   h2 {
@@ -32,19 +32,30 @@
   }
 
   label {
-    display: inline-block;
+    display: block;
     margin-bottom: 5px;
-    width: 100%;
+    font-weight: bold;
+    font-size: 75%;
   }
+  .fieldset  {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+  }
+   
+  fieldset {
+    border: 1px solid #ccc;
+  }
+
 
   input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
-    width: 150px;
+    width: 80px;
   }
 
   button {
@@ -56,6 +67,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   button:hover {
@@ -68,21 +80,4 @@
     text-align: center;
   }
 
-  .main {
-    display: flex;
-  }
 
-  /* Media query for screens with a maximum width of 600px */
-  @media (max-width: 600px) {
-    
-    .main {
-    display: flex;
-    flex-direction: column; /* Added to ensure responsiveness */
-    }
-
-    .container {
-      max-width: 100%; /* Use 100% width for small screens */
-      padding: 10px; /* Reduce padding for small screens */
-    }
-
-  }

@@ -27,7 +27,7 @@
     var additionalSaleTax = parseFloat(document.getElementById('additional-sales-tax').value);
     var incomeTaxRate = parseFloat(document.getElementById('income-tax').value);
 
-    var unitCost = kgPrice + freight + extExp;
+    var unitCost = kgPrice;
     var dutyCalculations = unitCost * (duty + extDuty) / 100;
 
     var totalCost = unitCost + dutyCalculations;
@@ -38,7 +38,7 @@
 
     var incomeTax = totalcostinclSalesTax * incomeTaxRate / 100;
 
-    var totalCost1 = totalcostinclSalesTax + incomeTax;
+    var totalCost1 = totalcostinclSalesTax + incomeTax + freight + extExp;
 
   
     
